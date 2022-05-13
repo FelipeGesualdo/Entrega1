@@ -1,0 +1,25 @@
+{% extends "AppMVT/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>FORMULARIO DE JUGADORES</h1>
+    <h2>Por favor complete sus datos</h2>
+
+    <form action="{% url 'jugadores' %}" method="POST">{% csrf_token %}
+    
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="ENVIAR">
+
+    </form>
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1>JUGADORES</h1>
+
+{% endblock %}

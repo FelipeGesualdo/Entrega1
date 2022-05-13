@@ -1,0 +1,26 @@
+{% extends "AppMVT/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>Jugadores encontrados:</h1>
+
+    {% if Jugadores %}
+
+    {% for jugador in Jugadores %}
+        <p>{{jugador.nombre}}</p>
+    {% endfor %}
+
+    {% else %}
+        <p>No hay jugadores con ese nombre</p>
+        
+    {% endif %}
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1>INICIO</h1>
+
+{% endblock %}

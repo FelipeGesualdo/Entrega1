@@ -1,0 +1,27 @@
+{% extends "AppMVT/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h1>FORMULARIO DE MATERIALES</h1>
+    <h2>Por favor complete sus datos</h2>
+
+    <form action="{% url 'materiales' %}" method="POST">{% csrf_token %}
+    
+        <table>
+            {{formulario.as_table}}
+        </table>
+        <input type="submit" value="ENVIAR">
+
+
+
+    </form>
+
+{% endblock %}
+
+{% block titulo %}
+
+    <h1>MATERIALES</h1>
+
+{% endblock %}
